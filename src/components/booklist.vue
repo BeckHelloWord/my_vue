@@ -1,3 +1,4 @@
+<!--组件-->
 <template>
   <div class="booklist">
     <h2>{{bookListName}}</h2>
@@ -12,7 +13,7 @@
 <script>
   export default {
     name: 'booklist',
-    props: ['soldOutBook'],
+    props: ['soldOutBook'], //父组件数据，传递给子组件
     data() {
       return {
         bookListName: '已售罄书籍'

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p v-text="title"></p>
+    <!--使用组件-->
     <sold-out :soldOutBook="items"></sold-out>
     <input type="text" v-model="bookName" @keyup.enter="addBook" />
     <ul class="bookList">
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+  //导入组件
   import booklist from './components/booklist'
 
   export default {
@@ -23,7 +25,9 @@
         ],
         bookName: ''
       }
-    }, components: {
+    }, 
+    components: {
+      //注册组件
       'sold-out': booklist
     },
     methods: {
