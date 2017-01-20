@@ -4,7 +4,7 @@
     <h2>{{bookListName}}</h2>
     <ul class="soldOut">
       <li v-for="item in soldOutBook" v-if="item.isDel" v-on:click='childClick'>
-        {{item.name}}<span class="tips-soldout">售罄</span>
+        {{item.name | formatName}}<span class="tips-soldout">售罄</span>
       </li>
     </ul>
   </div>

@@ -6,7 +6,7 @@
     <input type="text" v-model="bookName" @keyup.enter="addBook" />
     <p v-text="childSay"></p>
     <ul class="bookList">
-      <li v-for="item in items" v-bind:class="{isDel:item.isDel}" v-on:click="delBook(item)">{{item.name}}</li>
+      <li v-for="item in items" v-bind:class="{isDel:item.isDel}" v-on:click="delBook(item)">{{item.name | formatName}}</li>
     </ul>
   </div>
 </template>
@@ -55,6 +55,7 @@
       }
     }
   }
+
 </script>
 
 <style>
