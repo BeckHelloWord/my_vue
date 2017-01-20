@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <p v-text="title"></p>
+    <sold-out :soldOutBook="items"></sold-out>
     <input type="text" v-model="bookName" @keyup.enter="addBook" />
     <ul class="bookList">
       <li v-for="item in items" v-bind:class="{isDel:item.isDel}" v-on:click="delBook(item)">{{item.name}}</li>
@@ -9,7 +10,7 @@
 </template>
 
 <script>
-  import Hello from './components/Hello'
+  import booklist from './components/booklist'
 
   export default {
     data() {
@@ -22,6 +23,8 @@
         ],
         bookName: ''
       }
+    }, components: {
+      'sold-out': booklist
     },
     methods: {
       delBook: function (item) {
@@ -54,6 +57,7 @@
 }
 .bookList li{
   margin:10px 0;
+  cursor: pointer;
 }
 .isDel{
   text-decoration: line-through;
