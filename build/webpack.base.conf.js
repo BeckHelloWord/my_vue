@@ -51,6 +51,10 @@ module.exports = {
         loader: 'json'
       },
       {
+        test: /\.s[a|c]ss$/,
+        loader: 'style!css!sass'
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {

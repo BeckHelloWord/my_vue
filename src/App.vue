@@ -58,28 +58,6 @@
 
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.bookList{
-  width:210px;
-  margin:0 auto;
-  font-size:12px;
-  color:#999;
-  text-align: left;
-  list-style: none;
-}
-.bookList li{
-  margin:10px 0;
-  cursor: pointer;
-}
-.isDel{
-  text-decoration: line-through;
-}
+<style lang='sass'>
+  @import 'src/assets/common';
 </style>
