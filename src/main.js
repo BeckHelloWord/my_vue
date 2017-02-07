@@ -2,6 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueRouter from 'vue-router';
+
+Vue.use(VueRouter);
+
+import routerOption from './router.js'
+
+const router = new VueRouter(routerOption);
+// 现在我们可以启动应用了！
 
 
 /*过滤器*/
@@ -14,8 +22,10 @@ Vue.filter('formatName', function (value) {
 });
 
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
-});
+const app = new Vue({
+    router: router,
+    render: h => h(App)
+}).$mount('#app')
+
+
+// router.start(App, '#app');
