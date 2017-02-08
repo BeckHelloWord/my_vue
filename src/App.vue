@@ -1,19 +1,25 @@
+<!--主组件 所有组件都会有它-->
 <template>
+  <div class="abc">
     <router-view></router-view>
+    <div class="footer" v-show="show">主组件</div>
+  </div>
 </template>
+
 
 <script>
   export default {
     data() {
-      return {}
+      return {
+        show:true,
+      }
     },
     components: {
-      //注册组件
-      // 'router-view': VueRouter
     },
     methods: {
     }
   }
+
 </script>
 <style lang='sass'>
   @import 'src/assets/common';

@@ -53,6 +53,9 @@
         //子组件通信父组件，触发事件后传递的参数
         this.childSay = msg;
       }
+    },
+    created(){
+      this.$parent.show=false;
     }
   }
 

@@ -25,6 +25,9 @@
         //触发父组件上的自定义事件
         this.$emit('child-tell-something',this.msg);
       }
+    },
+    created(){
+      this.$parent.show=true;
     }
   }
 </script>
