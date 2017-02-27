@@ -27,7 +27,10 @@
       return {
         msg: 'Welcome to Your Vue.js App abc'
       }
-    }
+    },
+  created(){
+   console.log($);
+  }
   }
 </script>
 
